@@ -1,0 +1,108 @@
+.header {
+    background-color: white;
+    margin: 0px 10px 0px 0px;
+    display: flex;
+}
+
+.header__inner {
+    max-width: 1230px;
+}
+
+h1 {
+    font-size: 2vw;
+    margin-left: 40px;
+}
+
+.header__menu {
+    margin: 15px 0 0 auto;
+}
+
+.header__menu ul{
+    display: flex;
+    float: right;
+    font-size: 1.1vw;
+}
+
+.header__menu li{
+    list-style: none;
+    margin-right: 50px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+}
+
+.main_content {
+    background-color: rgba(235, 234, 234, 0.757);
+    height: auto;
+}
+
+.date {
+    font-size: 1.4vw;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+table{
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr{
+    border-top: 1px solid black;
+    height: 8vh;
+}
+
+th{
+    text-align: left;
+    padding-left: 45px;
+}
+
+td{
+    padding-left: 45px;
+    text-align: left;
+}
+
+.paginate{
+    width: 50vw;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.paginate ul{
+    display: flex;
+    justify-content: center;
+}
+
+.page-item{
+    display: flex;
+    color: rgb(58, 147, 255);
+    padding: 10px 14px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
+.page-link{
+    padding: 1px 2px;
+    text-align: center;
+}
+
+.page-item a{
+    color: rgb(58, 147, 255);
+    text-decoration: none;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #000000;
+}

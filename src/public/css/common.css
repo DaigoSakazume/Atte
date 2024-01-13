@@ -1,0 +1,14 @@
+.header {
+    background-color: white;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+}
+
+.header__inner {
+    max-width: 1230px;
+}
+
+h1 {
+    font-size: 2vw;
+    margin-left: 40px;
+}

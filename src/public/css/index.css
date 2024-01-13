@@ -1,0 +1,75 @@
+.header {
+    background-color: white;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+}
+
+.header__inner {
+    max-width: 1230px;
+}
+
+h1 {
+    font-size: 2vw;
+    margin-left: 40px;
+}
+
+.header__menu {
+    margin: 15px 0 0 auto;
+}
+
+ul {
+    display: flex;
+    float: right;
+    font-size: 1.1vw;
+}
+
+li {
+    list-style: none;
+    margin-right: 50px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+}
+
+.main_content {
+    background-color: rgba(235, 234, 234, 0.757);
+}
+
+.username {
+    font-size: 1.4vw;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+.button_grid {
+    margin: 0 auto;
+    width: 900px;
+    display: grid;
+    grid-template-rows: 160px 160px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    padding-bottom: 150px;
+}
+
+button{
+    background-color: #ffffff;
+    font-size: 1.3vw;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 420px;
+    height: 160px;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #000000;
+}
