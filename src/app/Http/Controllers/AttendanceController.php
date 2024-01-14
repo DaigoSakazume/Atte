@@ -34,11 +34,13 @@ class AttendanceController extends Controller
 
     public function attendance()
     {
-        $rests = Rest::Paginate(1);
         $attendances = Attendance::Paginate(5);
+        $rests = Rest::Paginate(5);
+
         return view('attendance', [
+
             'attendances' => $attendances,
-            'rests' => $rests
+            'rests' => $rests,
         ]);
     }
 }

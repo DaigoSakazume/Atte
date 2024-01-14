@@ -35,20 +35,21 @@
                 <th>勤務時間</th>
             </tr>
             @foreach ($attendances as $attendance)
-            @foreach ($rests as $rest)
+                @php
+                    $rest = $rests->where('attendance_id', $attendance->id)->first();
+                @endphp
             <tr>
-                <td>{{$attendance->id}}</td>
                 <td>{{$attendance->user_id}}</td>
                 <td>{{$attendance->start_time}}</td>
                 <td>{{$attendance->end_time}}</td>
-                <td>{{$rest->attendance_id}}</td>
                 <td>{{$rest->start_time}}</td>
                 <td>{{$rest->end_time}}</td>
             </tr>
             @endforeach
-            @endforeach
         </table>
-        <div class="paginate">{{ $attendances, $rests->links() }}</div>
+        <div class="paginate">
+            {{$attendances, $rests->links() }}
+        </div>
     </div>
 </main>
 <footer>
