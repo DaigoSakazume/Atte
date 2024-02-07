@@ -17,15 +17,26 @@
     </div>
     <div class="header__menu">
         <ul>
-            <li>ホーム</li>
-            <li>日付一覧</li>
-            <li>ログアウト</li>
+        @if (Auth::check())
+            <li><a href="/">ホーム</a></li>
+            <li><a href="/attendance">日付一覧</a></li>
+            <li>
+                <form class="logout" action="/logout" method="post">
+                    @csrf
+                    <button class="logout" type="submit">ログアウト</button>
+                </form>
+            </li>
+            @endif
         </ul>
     </div>
 </header>
 <main>
     <div class="main_content">
-        <p class="date">2021/11/01</p>
+        <div class="date">
+            <a href="/attendance?date={{ $prevDate }}" class="dateArrow"><</a>
+            <span>{{ $selectedDate }}</span>
+            <a href="/attendance?date={{ $nextDate }}" class="dateArrow">></a>
+        </div>
         <table>
             <tr>
                 <th>名前</th>
@@ -37,13 +48,15 @@
             @foreach ($attendances as $attendance)
                 @php
                     $rest = $rests->where('attendance_id', $attendance->id)->first();
+                    $rest_time = \Carbon\Carbon::parse($rest->start_time)->diff(\Carbon\Carbon::parse($rest->end_time))->format('%H:%I:%S');
+                    $work_time = \Carbon\Carbon::parse($attendance->start_time)->diff(\Carbon\Carbon::parse($attendance->end_time), $rest_time)->format('%H:%I:%S');
                 @endphp
             <tr>
-                <td>{{$attendance->user_id}}</td>
+                <td>{{$attendance->user->name}}</td>
                 <td>{{$attendance->start_time}}</td>
                 <td>{{$attendance->end_time}}</td>
-                <td>{{$rest->start_time}}</td>
-                <td>{{$rest->end_time}}</td>
+                <td>{{$rest_time}}</td>
+                <td>{{$work_time}}</td>
             </tr>
             @endforeach
         </table>

@@ -24,7 +24,7 @@ class AttendanceFactory extends Factory
     {
         return [
             'user_id' => User::inRandomOrder()->first()->id,
-            'date' => $this->faker->date,
+            'date' => $this->faker->dateTimeBetween('-2 days'),
             'start_time' => $this->faker->time,
             'end_time' => $this->faker->time,
         ];

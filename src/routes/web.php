@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,11 @@ use App\Http\Controllers\AttendanceController;
 |
 */
 
-Route::get('/', [AttendanceController::class, 'index']);
-Route::get('/attendance/start', [AttendanceController::class, 'start']);
+Route::middleware('auth')->group(function () {
+    Route::get('/', [AttendanceController::class, 'index']);
+});
 Route::post('/attendance/start', [AttendanceController::class, 'start']);
-Route::get('/register', [AttendanceController::class, 'register']);
-Route::get('/login', [AttendanceController::class, 'login']);
+Route::post('/attendance/end', [AttendanceController::class, 'end']);
+Route::post('/break/start', [AttendanceController::class, 'breakStart']);
+Route::post('/break/end', [AttendanceController::class, 'breakEnd']);
 Route::get('/attendance', [AttendanceController::class, 'attendance']);
-
