@@ -20,10 +20,10 @@ http://localhost/
 - MySQL 8.0
 
 ## テーブル設計
-![Atte.Sample](Atte_Table)
+![Atte.Table](Atte_Table)
 
 ## ER図
-![Atte.Sample](Atte.Sample.png)
+![Atte.Table](Atte.Sample.png)
 
 ## 環境構築
 1. docker-compose exec php bash
