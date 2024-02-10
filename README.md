@@ -20,7 +20,7 @@ http://localhost/
 - MySQL 8.0
 
 ## テーブル設計
-![Atte.Table](Atte.Table.png)
+![Atte.Table](Atte.table.png)
 
 ## ER図
 ![Atte.ER](Atte.ER.png)
