@@ -1,6 +1,6 @@
 # Atte
 勤怠管理アプリ
-![Atte.Sample](Atte.Sample.png)
+![Atte.Sample](Atte_Sample.png)
 
 ## 作成した目的
 人事評価のため
@@ -20,10 +20,10 @@ http://localhost/
 - MySQL 8.0
 
 ## テーブル設計
-![Atte.Table](Atte.table.png)
+![Atte.Table](Atte_table.png)
 
 ## ER図
-![Atte.ER](Atte.ER.png)
+![Atte.ER](Atte_ER.png)
 
 ## 環境構築
 1. docker-compose exec php bash
